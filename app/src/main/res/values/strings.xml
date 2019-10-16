@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Apparule</string>
+    <string name="dont_have_an_account">Don\'t have an account?
+        <u>Sign Up here</u>
+    </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
 </resources>

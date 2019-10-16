@@ -1,4 +1,4 @@
-package com.cuesoft.io.Apparule.model
+package com.cuesoft.io.apparule.model
 
 data class Designer (var id: Int, var businessname: String,
                      var email: String, var phonenumber: Int,

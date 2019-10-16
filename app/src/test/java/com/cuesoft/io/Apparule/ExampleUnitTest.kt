@@ -1,4 +1,4 @@
-package com.cuesoft.io.Apparule
+package com.cuesoft.io.apparule
 
 import org.junit.Test
 

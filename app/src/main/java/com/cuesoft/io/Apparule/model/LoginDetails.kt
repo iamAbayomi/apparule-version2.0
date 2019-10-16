@@ -1,3 +1,3 @@
-package com.cuesoft.io.Apparule.model
+package com.cuesoft.io.apparule.model
 
 data class LoginDetails(var FullName:String , var Email: String)

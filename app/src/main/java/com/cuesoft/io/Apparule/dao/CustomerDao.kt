@@ -1,18 +1,18 @@
-package com.cuesoft.io.Apparule.dao
+package com.cuesoft.io.apparule.dao
 
+import androidx.lifecycle.LiveData
+import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
-import com.cuesoft.io.Apparule.model.Customer
+import com.cuesoft.io.apparule.model.Customer
 
+@Dao
 interface CustomerDao{
 
     @Insert
-    fun insertCustomer(customer: Customer)
+    suspend  fun insertCustomer(customer: Customer)
 
-    @Query("SELECT * FROM customer WHERE customerId IN (:userIds)")
-    fun loadAllByIds(userIds: IntArray): List<Customer>
-
-
-    //@Query("SELECT * FROM user")
+    @Query("SELECT * FROM customer")
+    fun getAll(): LiveData<List<Customer>>
 
 }

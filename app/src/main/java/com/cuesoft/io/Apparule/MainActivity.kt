@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
             secondnameView.text = customer.lastname
             emailView.text = customer.email
             phonenumberView.text = customer.phonenumber
-
+        }
 
         )
     }

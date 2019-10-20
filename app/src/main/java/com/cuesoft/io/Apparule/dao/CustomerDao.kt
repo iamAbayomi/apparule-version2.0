@@ -13,6 +13,11 @@ interface CustomerDao{
     suspend  fun insertCustomer(customer: Customer)
 
     @Query("SELECT * FROM customer")
-    fun getAll(): LiveData<List<Customer>>
+    fun getAll(): LiveData<Customer>
+
+
+    @Query("SELECT * FROM customer WHERE customerId = customerID")
+    fun loadUserProfile(customerID: Int):LiveData<Customer>
+
 
 }

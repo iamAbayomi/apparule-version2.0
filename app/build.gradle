@@ -58,4 +58,6 @@ dependencies {
     androidTestImplementation "androidx.arch.core:core-testing:$rootProject.androidxArchVersion"
     implementation 'androidx.navigation:navigation-fragment-ktx:2.1.0'
     implementation 'androidx.navigation:navigation-ui-ktx:2.1.0'
+    debugImplementation 'com.idescout.sql:sqlscout-server:4.1'
+    releaseImplementation 'com.idescout.sql:sqlscout-server-noop:4.1'
 }

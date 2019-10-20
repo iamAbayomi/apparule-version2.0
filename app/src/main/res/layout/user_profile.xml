@@ -33,7 +33,7 @@
                 android:layout_marginStart="32dp" android:layout_marginTop="57dp"
                 app:layout_constraintTop_toBottomOf="@+id/firstnameView"/>
         <TextView
-                android:text="Phone Nymber"
+                android:text="Phone Number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/SmallEditView"

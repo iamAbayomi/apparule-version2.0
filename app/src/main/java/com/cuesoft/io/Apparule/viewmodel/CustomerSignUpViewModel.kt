@@ -17,14 +17,14 @@ class CustomerSignUpViewModel(application: Application): AndroidViewModel(applic
     private val repository: CustomerSignUpRepository
 
     // LiveData gives us updated words when they change
-    val allcustomers: LiveData<List<Customer>>
+    val allcustomers: LiveData<Customer>
 
     init{
         //Gets reference to CustomerDao from ApparuleRoomDatabase to construct
         // the correct CustomerSignUpRepository
         val customerDao = ApparuleRoomDatabase.getDatabase(application).customerDao()
         repository = CustomerSignUpRepository(customerDao)
-        allcustomers = repository.getAllWords
+        allcustomers = repository.getAllCustomers
     }
 
     //The implementation of insert() is completely hidden from the UI
@@ -34,6 +34,10 @@ class CustomerSignUpViewModel(application: Application): AndroidViewModel(applic
 
     fun insert(customer: Customer) = viewModelScope.launch{
         repository.insert(customer)
+    }
+
+    fun findUser(userId: Int) =viewModelScope.launch {
+        repository.loadUserProfile(userId)
     }
 
 }

@@ -15,9 +15,11 @@ interface CustomerDao{
     @Query("SELECT * FROM customer")
     fun getAll(): LiveData<Customer>
 
+/*
 
     @Query("SELECT * FROM customer WHERE customerId = customerID")
     fun loadUserProfile(customerID: Int):LiveData<Customer>
 
+*/
 
 }

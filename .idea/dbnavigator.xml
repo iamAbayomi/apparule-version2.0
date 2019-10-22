@@ -25,7 +25,7 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="4a055fba-fbd1-4b30-a36b-e01300502b34">
-        <schema name="main" object-types="column, view, index, table, dataset trigger, constraint" />
+        <schema name="main" object-types="table, column, view" />
       </connection>
     </loaded-nodes>
   </component>
@@ -37,9 +37,9 @@
       <console name="Connection 2" type="STANDARD" schema="" session="Main" />
     </connection>
     <connection id="4a055fba-fbd1-4b30-a36b-e01300502b34">
-      <console name="Connection" type="STANDARD" schema="main" session="Main"><![CDATA[select * from "Customer" where "customerId" = 3
+      <console name="Connection" type="STANDARD" schema="main" session="Main">select * from &quot;Customer&quot; where &quot;customerId&quot; = 3
 
-select * from "Customer"]]></console>
+select * from &quot;Customer&quot;</console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">

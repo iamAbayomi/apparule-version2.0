@@ -11,10 +11,12 @@ class CustomerSignUpRepository(private val customerDao: CustomerDao){
     //observed LiveData will notify the observer when the data
     val getAllCustomers: LiveData<Customer> = customerDao.getAll()
 
+/*
 
-    suspend fun loadUserProfile(userID: Int): LiveData<Customer>{
+    fun loadUserProfile(userID: Int): LiveData<Customer>{
         return customerDao.loadUserProfile(userID)
     }
+*/
 
     suspend fun insert(customer: Customer){
         customerDao.insertCustomer(customer)

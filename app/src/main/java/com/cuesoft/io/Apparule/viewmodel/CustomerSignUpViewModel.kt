@@ -36,8 +36,8 @@ class CustomerSignUpViewModel(application: Application): AndroidViewModel(applic
         repository.insert(customer)
     }
 
-    fun findUser(userId: Int) =viewModelScope.launch {
-        repository.loadUserProfile(userId)
-    }
+  /*  fun findUser(userId: Int): LiveData<Customer>  {
+       return repository.loadUserProfile(userId)
+    }*/
 
 }

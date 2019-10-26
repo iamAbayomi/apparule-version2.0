@@ -13,11 +13,11 @@ class BaseActivity : AppCompatActivity() {
 
     private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
-            R.id.navigation_home -> {
+            R.id.navigation_favourite -> {
 
                 return@OnNavigationItemSelectedListener true
             }
-            R.id.navigation_dashboard -> {
+            R.id.navigation_search -> {
 
                 return@OnNavigationItemSelectedListener true
             }
@@ -25,6 +25,13 @@ class BaseActivity : AppCompatActivity() {
 
                 return@OnNavigationItemSelectedListener true
             }
+            R.id.navigation_add ->{
+                return@OnNavigationItemSelectedListener  true
+            }
+            R.id.navigation_account->{
+                return@OnNavigationItemSelectedListener true
+            }
+
         }
         false
     }

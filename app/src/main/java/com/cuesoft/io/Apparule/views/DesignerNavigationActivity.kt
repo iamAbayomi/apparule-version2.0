@@ -1,5 +1,8 @@
 package com.cuesoft.io.apparule.views
 
+import android.app.Activity
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
@@ -11,6 +14,7 @@ import com.google.android.material.navigation.NavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import android.view.Menu
+import com.cuesoft.io.apparule.AddItemActivity
 import com.cuesoft.io.apparule.R
 
 class DesignerNavigationActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -23,10 +27,12 @@ class DesignerNavigationActivity : AppCompatActivity(), NavigationView.OnNavigat
         setSupportActionBar(toolbar)
 
         val fab: FloatingActionButton = findViewById(R.id.fab)
+
         fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+            startActivity(Intent(this, AddItemActivity::class.java))
         }
+
+
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
         val toggle = ActionBarDrawerToggle(
@@ -58,7 +64,11 @@ class DesignerNavigationActivity : AppCompatActivity(), NavigationView.OnNavigat
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         return when (item.itemId) {
-            R.id.action_settings -> true
+            R.id.action_settings ->{
+                 startActivity(Intent(this, BaseActivity::class.java))
+                return true
+        }
+
             else -> super.onOptionsItemSelected(item)
         }
     }
@@ -66,27 +76,20 @@ class DesignerNavigationActivity : AppCompatActivity(), NavigationView.OnNavigat
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
         when (item.itemId) {
-            R.id.nav_home -> {
+            R.id.nav_catalogue-> {
                 // Handle the camera action
             }
-            R.id.nav_gallery -> {
 
-            }
-            R.id.nav_slideshow -> {
-
-            }
-            R.id.nav_tools -> {
-
-            }
-            R.id.nav_share -> {
-
-            }
-            R.id.nav_send -> {
-
-            }
         }
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         drawerLayout.closeDrawer(GravityCompat.START)
         return true
     }
+
+
+    fun goToActivtiy(activity: Activity){
+        val intent  = Intent(this, activity::class.java )
+        startActivity(intent)
+    }
+
 }

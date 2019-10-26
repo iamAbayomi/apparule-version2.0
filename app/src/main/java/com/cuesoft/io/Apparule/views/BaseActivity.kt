@@ -13,21 +13,23 @@ class BaseActivity : AppCompatActivity() {
 
     private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
-            R.id.navigation_favourite -> {
+         /*   R.id.navigation_favourite -> {
 
                 return@OnNavigationItemSelectedListener true
-            }
+            }*/
             R.id.navigation_search -> {
 
                 return@OnNavigationItemSelectedListener true
             }
-            R.id.navigation_notifications -> {
+          /*  R.id.navigation_notifications -> {
 
                 return@OnNavigationItemSelectedListener true
-            }
-            R.id.navigation_add ->{
+            }*/
+
+            /*R.id.navigation_add ->{
                 return@OnNavigationItemSelectedListener  true
-            }
+            }*/
+
             R.id.navigation_account->{
                 return@OnNavigationItemSelectedListener true
             }
@@ -40,6 +42,8 @@ class BaseActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_base)
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
+
+        //navView.
 
         //textMessage = findViewById(R.id.message)
         navView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)

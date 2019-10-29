@@ -6,6 +6,17 @@
 
     <dist:module dist:instant="true"/>
 
+    <uses-permission android:name ="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <uses-feature android:name="android.hardware.camera"
+                  android:required="true"
+    />
+    <uses-feature android:name="android.hardware.camera.flash"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+
+
     <application
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
@@ -14,8 +25,24 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".AddItemActivity">
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.cuesoft.io.apparule.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"
+            >
+
+            </meta-data>
+        </provider>
+
+        <activity android:name=".views.AddItemActivity">
         </activity>
+
         <activity
                 android:name=".views.DesignerNavigationActivity"
                 android:label="@string/title_activity_designer_navigation"

@@ -6,4 +6,6 @@
     <color name="LightBlue">#0099ff</color>
     <color name="DarkBlue">#0769AA</color>
     <color name="app_color_yellow">#ffcc00</color>
+    <color name="LightPink">#FDB19E9E</color>
+    <color name="LighterPink">#E9D7D7</color>
 </resources>

@@ -6,7 +6,7 @@
         <item name="colorPrimary">@color/LightBlue</item>
         <item name="colorPrimaryDark">@color/LightBlue</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="windowNoTitle">true</item>
+    <!--    <item name="windowNoTitle">true</item>-->
        <!-- <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>-->
 
     </style>
@@ -39,7 +39,6 @@
         <item name="android:layout_marginStart">22dp</item>
     </style>
 
-
     <style name="SmallEditView" parent="Widget.AppCompat.EditText">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">48dp</item>
@@ -47,6 +46,30 @@
         <item name="android:layout_marginStart">22dp</item>
         <item name="android:layout_marginEnd">22dp</item>
     </style>
+
+
+    <style name="PinkTextView" parent="SmallTextView">
+        <item name="android:textColor">@color/LightPink</item>
+        <item name="android:layout_marginTop">22dp</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="PinkEditTextView" parent="SmallEditView">
+        <item name="android:background">@color/LighterPink</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginTop">22dp</item>
+    </style>
+
+    <style name="CardView" parent="Base.CardView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:height">333dp</item>
+        <item name="android:background">@color/LighterPink</item>
+        <item name="android:layout_marginStart">22dp</item>
+        <item name="android:layout_marginEnd">22dp</item>
+
+    </style>
+
+
 
 
     <style name="BlueButton" parent="Widget.AppCompat.Button">
